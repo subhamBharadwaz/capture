@@ -1,4 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+import { Route, Switch } from "react-router-dom";
+
 // Global Style
 import GlobalStyle from "./components/GlobalStyle";
 
@@ -7,14 +10,26 @@ import AboutUs from "./pages/AboutUs";
 
 // Import components
 import Nav from "./components/Nav";
+import ContactUs from "./pages/ContactUs";
+import OurWork from "./pages/OurWork";
 
 const App = () => {
   return (
-    <div className="App">
+    <Fragment>
       <GlobalStyle />
       <Nav />
-      <AboutUs />
-    </div>
+      <Switch>
+        <Route path="/" exact>
+          <AboutUs />
+        </Route>
+        <Route path="/work">
+          <OurWork />
+        </Route>
+        <Route path="/contact">
+          <ContactUs />
+        </Route>
+      </Switch>
+    </Fragment>
   );
 };
 
