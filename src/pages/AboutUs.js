@@ -1,13 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 // Import pages components
 import AboutSection from "../components/AboutSection";
+import ServicesSection from "../components/ServicesSection";
 
 const AboutUs = () => {
   return (
-    <div>
+    <Fragment>
       <AboutSection />
-    </div>
+      <ServicesSection />
+    </Fragment>
   );
 };
 
