@@ -25,7 +25,7 @@ dd {
 
 h2{
    font-weight: lighter;
-   font-size: 4rem;
+   font-size: 3rem;
 }
 
 h3{
@@ -62,6 +62,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  font-family: 'Inter', sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background: #1b1b1b;
@@ -94,6 +95,7 @@ select {
 button{
     font-weight: bold;
     font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
     padding: 1rem 2rem;
     border: 3px solid #23d997;
