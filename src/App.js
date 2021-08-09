@@ -1,6 +1,10 @@
 import React, { Fragment } from "react";
 
-import { Route, Switch } from "react-router-dom";
+// Routing
+import { Route, Switch, useLocation } from "react-router-dom";
+
+// Animation
+import { AnimatePresence } from "framer-motion";
 
 // Global Style
 import GlobalStyle from "./components/GlobalStyle";
@@ -15,24 +19,29 @@ import MovieDetail from "./pages/MovieDetail";
 import Nav from "./components/Nav";
 
 const App = () => {
+  const location = useLocation();
+
   return (
     <Fragment>
       <GlobalStyle />
       <Nav />
-      <Switch>
-        <Route path="/" exact>
-          <AboutUs />
-        </Route>
-        <Route path="/work" exact>
-          <OurWork />
-        </Route>
-        <Route path="/work/:id">
-          <MovieDetail />
-        </Route>
-        <Route path="/contact">
-          <ContactUs />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        {/* location & key used in Switch are only for framer motion specific. They want these for page transition */}
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <AboutUs />
+          </Route>
+          <Route path="/work" exact>
+            <OurWork />
+          </Route>
+          <Route path="/work/:id">
+            <MovieDetail />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </Fragment>
   );
 };

@@ -1,8 +1,14 @@
 import React, { useState, useEffect, Fragment } from "react";
 
+// Routing
 import { useHistory } from "react-router-dom";
+
 // Style
 import styled from "styled-components";
+
+// Import Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 import { MovieState } from "../movieState";
 
@@ -22,7 +28,12 @@ const MovieDetail = () => {
   return (
     <Fragment>
       {movie && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -45,7 +56,7 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 
