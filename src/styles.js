@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // Styles
 export const About = styled.div`
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
