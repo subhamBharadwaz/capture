@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 // Style
 import styled from "styled-components";
 
-// Import Animation
+//  Animation
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
