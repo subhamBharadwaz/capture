@@ -1,7 +1,9 @@
+// Animation
+import { motion } from "framer-motion";
+// Styles
 import styled from "styled-components";
 
-// Styles
-export const About = styled.div`
+export const About = styled(motion.div)`
   min-height: 100vh;
   display: flex;
   align-items: center;
