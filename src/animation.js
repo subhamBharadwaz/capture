@@ -21,7 +21,7 @@ export const pageAnimation = {
 };
 
 export const titleAnim = {
-  hidden: { y: 200, rotate: 15 },
+  hidden: { y: 200, rotate: 25 },
   show: {
     y: 0,
     rotate: 0,
