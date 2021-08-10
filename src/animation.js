@@ -32,6 +32,17 @@ export const titleAnim = {
   },
 };
 
+export const titleAnimNorm = {
+  hidden: { y: 200 },
+  show: {
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 export const fadeAnim = {
   hidden: { opacity: 0 },
   show: {
