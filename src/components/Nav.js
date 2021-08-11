@@ -59,6 +59,8 @@ const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden;
+
   a {
     color: white;
     text-decoration: none;
