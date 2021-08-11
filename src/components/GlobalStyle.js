@@ -9,6 +9,15 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
+
+ /* Media queries */
+ html{
+   @media (max-width:1700px){
+     font-size:75%;
+   }
+
+ }
+
 /* Remove default margin */
 body,
 h1,
