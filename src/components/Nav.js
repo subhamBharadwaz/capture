@@ -93,6 +93,16 @@ const StyledNav = styled.nav`
       width: 100%;
     }
   }
+  @media (max-width: 768px) {
+    #logo {
+      margin: 0.1rem;
+    }
+    ul {
+      padding: 1rem;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
 `;
 
 const Line = styled(motion.div)`
@@ -105,6 +115,9 @@ const Line = styled(motion.div)`
 
   @media (max-width: 1300px) {
     left: 45%;
+  }
+  @media (max-width: 768px) {
+    bottom: -70%;
   }
 `;
 
